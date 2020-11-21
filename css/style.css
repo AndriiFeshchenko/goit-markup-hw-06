@@ -881,7 +881,7 @@ img {
 }
 .email-input:focus {
   border: 1px solid var(--blue);
-  transition: border var(--duration);
+  outline: none;
 }
 .footer-btn {
   position: relative;
@@ -968,9 +968,10 @@ img {
   opacity: 1;
 }
 .backdrop {
-  position: fixed;
-  top: 0;
-  left: 0;
+  position: relative;
+
+  top: -2500px;
+  left: 90px;
   right: 0;
   bottom: 0;
   background-color: rgba(25, 28, 38, 0.8);
@@ -1031,6 +1032,7 @@ img {
 
 .form-title {
   margin-bottom: 12px;
+  margin-top: 0;
 
   font-weight: 700;
   font-size: 20px;
@@ -1095,6 +1097,7 @@ img {
   left: 15px;
   top: 35px;
   fill: var(--back);
+  transition: fill var(--duration);
 }
 
 .form-input,
@@ -1102,38 +1105,26 @@ img {
   width: 100%;
 
   padding: 12px;
-
   border: 1px solid rgba(33, 33, 33, 0.2);
   box-sizing: border-box;
   border-radius: 4px;
 }
-/* .form-comment:not(:placeholder-shown) {
-  border-color: var(--blue);
-} */
-/* .form-input:not(:placeholder-shown) {
-  border-color: var(--blue);
-} */
-.form-field:focus + .input-icon {
-  fill: var(--blue);
-  transition: border var(--duration);
-}
 
 .form-input {
   padding-left: 42px;
+  transition: border-color var(--duration);
 }
 
-.form-input:focus,
+/* .form-input:focus,
 .form-input:hover {
   border: 1px solid var(--blue);
   cursor: pointer;
-}
-.form-input:focus .input-kind {
-  color: var (--blue);
-}
+} */
 
 .form-comment {
   height: 120px;
   resize: none;
+  padding-left: 12px;
 }
 
 .form-comment::placeholder {
@@ -1166,8 +1157,11 @@ img {
   margin-right: auto;
   padding-right: 54px;
   padding-left: 54px;
+  padding-bottom: 0;
+  margin-bottom: 0;
 
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  transition: background-color var(--duration);
 }
 
 .form-button:hover,
@@ -1177,8 +1171,9 @@ img {
 }
 .btn-close {
   position: absolute;
-  top: 15px;
+  top: 10px;
   right: 30px;
+  left: 485px;
   width: 30px;
   height: 30px;
   border-radius: 50%;
@@ -1186,17 +1181,23 @@ img {
   background-color: var(--white);
   color: var(--black);
   cursor: pointer;
+  transition: color, background-color var(--duration);
 }
 .btn-close:focus,
 .btn-close:hover {
   background-color: var(--blue);
   color: var(--white);
-  transition: color, background-color var(--duration);
 }
-.form-input:focus ~ .icon-item-list {
-  fill: var(--blue);
-}
+
 .footer-btn:focus + .icon-send,
 .footer-btn:hover + .icon-send {
   color: var(--black);
+}
+
+.form-input:focus {
+  border-color: var(--blue);
+  outline: none;
+}
+.form-input:focus + .input-icon {
+  fill: var(--blue);
 }
