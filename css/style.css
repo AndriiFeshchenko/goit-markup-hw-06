@@ -1113,9 +1113,9 @@ img {
 /* .form-input:not(:placeholder-shown) {
   border-color: var(--blue);
 } */
-.form-field:focus ~ .input-icon {
+.form-field:focus + .input-icon {
   fill: var(--blue);
-  transition: fill var(--duration);
+  transition: border var(--duration);
 }
 
 .form-input {
