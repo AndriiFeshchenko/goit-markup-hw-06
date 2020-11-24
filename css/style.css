@@ -760,6 +760,8 @@ img {
   display: block;
   width: 1600px;
   height: 252px;
+  margin-left: auto;
+  margin-right: auto;
 }
 .cellar-hero {
   display: block;
@@ -856,12 +858,14 @@ img {
 .footer-social {
   margin-left: 70px;
   padding-top: 72px;
+  height: 252px;
 }
 .footer-connection {
   display: inline-block;
 
   padding-top: 72px;
   margin-left: 93px;
+  height: 252px;
 }
 /* .subscribe {
   border: 1px solid rgba(255, 255, 255, 0.3);
